@@ -8,24 +8,692 @@
       name="description"
       content="Privacy Policy for CarVault Pro."
     >
-    <link rel="icon" href="../assets/app_icon.png">
-    <link rel="stylesheet" href="../styles.css">
+    <link rel="icon" href="assets/app_icon.png">
+    <style>
+      :root {
+        --bg: #f7f4ed;
+        --surface: #fffefa;
+        --surface-strong: #ffffff;
+        --ink: #151a1f;
+        --muted: #65717c;
+        --line: #ded8cc;
+        --brand: #0e6f68;
+        --brand-strong: #0a4f4b;
+        --accent: #c46c16;
+        --accent-soft: #f6e4cf;
+        --shadow: 0 24px 70px rgba(31, 39, 46, 0.12);
+        --radius: 8px;
+        --header-height: 78px;
+      }
+
+      * {
+        box-sizing: border-box;
+      }
+
+      html {
+        scroll-behavior: smooth;
+        scroll-padding-top: 104px;
+      }
+
+      body {
+        margin: 0;
+        min-width: 320px;
+        overflow-x: hidden;
+        color: var(--ink);
+        background:
+          linear-gradient(180deg, rgba(14, 111, 104, 0.09) 0, rgba(14, 111, 104, 0) 360px),
+          var(--bg);
+        font-family:
+          Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont,
+          "Segoe UI", sans-serif;
+        line-height: 1.65;
+        text-rendering: optimizeLegibility;
+      }
+
+      body::before {
+        position: fixed;
+        inset: 0;
+        z-index: -1;
+        pointer-events: none;
+        content: "";
+        background-image:
+          linear-gradient(rgba(21, 26, 31, 0.035) 1px, transparent 1px),
+          linear-gradient(90deg, rgba(21, 26, 31, 0.035) 1px, transparent 1px);
+        background-size: 48px 48px;
+        mask-image: linear-gradient(180deg, #000 0, transparent 520px);
+      }
+
+      a {
+        color: var(--brand);
+        text-decoration-thickness: 0.08em;
+        text-underline-offset: 0.2em;
+      }
+
+      a:hover {
+        color: var(--brand-strong);
+      }
+
+      .skip-link {
+        position: fixed;
+        top: 12px;
+        left: 12px;
+        z-index: 20;
+        padding: 10px 14px;
+        border-radius: var(--radius);
+        color: var(--surface-strong);
+        background: var(--ink);
+        transform: translateY(-150%);
+        transition: transform 160ms ease;
+      }
+
+      .skip-link:focus {
+        transform: translateY(0);
+      }
+
+      .site-header {
+        position: sticky;
+        top: 0;
+        z-index: 10;
+        border-bottom: 1px solid rgba(222, 216, 204, 0.86);
+        background: rgba(255, 254, 250, 0.88);
+        backdrop-filter: blur(18px);
+      }
+
+      .nav,
+      .page-shell,
+      .footer-inner {
+        width: min(1180px, calc(100% - 48px));
+        margin: 0 auto;
+      }
+
+      .nav {
+        min-height: var(--header-height);
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 24px;
+      }
+
+      .brand {
+        min-width: 0;
+        display: inline-flex;
+        align-items: center;
+        gap: 12px;
+        color: var(--ink);
+        text-decoration: none;
+      }
+
+      .brand-mark {
+        width: 46px;
+        height: 46px;
+        flex: 0 0 auto;
+        border-radius: 12px;
+        box-shadow: 0 10px 22px rgba(14, 111, 104, 0.18);
+      }
+
+      .brand-text {
+        min-width: 0;
+        display: grid;
+        gap: 1px;
+      }
+
+      .brand-name {
+        overflow: hidden;
+        color: var(--ink);
+        font-size: 1rem;
+        font-weight: 800;
+        line-height: 1.2;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+      }
+
+      .brand-tagline {
+        overflow: hidden;
+        color: var(--muted);
+        font-size: 0.8rem;
+        font-weight: 600;
+        line-height: 1.2;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+      }
+
+      .nav-links {
+        display: flex;
+        align-items: center;
+        gap: 6px;
+      }
+
+      .nav-link {
+        min-height: 38px;
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        padding: 8px 12px;
+        border-radius: var(--radius);
+        color: #38424b;
+        font-size: 0.9rem;
+        font-weight: 700;
+        line-height: 1.2;
+        text-decoration: none;
+        white-space: nowrap;
+      }
+
+      .nav-link:hover,
+      .nav-link[aria-current="page"] {
+        color: var(--brand-strong);
+        background: rgba(14, 111, 104, 0.1);
+      }
+
+      .page-shell {
+        display: grid;
+        grid-template-columns: 248px minmax(0, 1fr);
+        gap: 32px;
+        align-items: start;
+        padding: 42px 0 64px;
+      }
+
+      .toc {
+        position: sticky;
+        top: calc(var(--header-height) + 22px);
+        min-width: 0;
+        overflow: hidden;
+        border: 1px solid var(--line);
+        border-radius: var(--radius);
+        background: rgba(255, 254, 250, 0.82);
+        box-shadow: 0 12px 34px rgba(31, 39, 46, 0.07);
+      }
+
+      .toc-title {
+        padding: 17px 18px 12px;
+        color: var(--ink);
+        font-size: 0.78rem;
+        font-weight: 850;
+        letter-spacing: 0.08em;
+        text-transform: uppercase;
+      }
+
+      .toc nav {
+        display: grid;
+        padding: 0 10px 10px;
+      }
+
+      .toc a {
+        min-height: 38px;
+        display: flex;
+        align-items: center;
+        padding: 8px;
+        border-radius: var(--radius);
+        color: #45505a;
+        font-size: 0.9rem;
+        font-weight: 700;
+        line-height: 1.25;
+        text-decoration: none;
+      }
+
+      .toc a:hover,
+      .toc a:focus-visible {
+        color: var(--brand-strong);
+        background: rgba(14, 111, 104, 0.1);
+        outline: none;
+      }
+
+      .legal-document {
+        min-width: 0;
+        overflow: hidden;
+        border: 1px solid var(--line);
+        border-radius: var(--radius);
+        background: var(--surface);
+        box-shadow: var(--shadow);
+      }
+
+      .document-header {
+        position: relative;
+        padding: 46px 52px 36px;
+        border-bottom: 1px solid var(--line);
+        background:
+          linear-gradient(135deg, rgba(14, 111, 104, 0.12), rgba(196, 108, 22, 0.1)),
+          var(--surface-strong);
+      }
+
+      .document-header::after {
+        position: absolute;
+        right: 38px;
+        bottom: 30px;
+        width: 92px;
+        height: 92px;
+        content: "";
+        background: url("assets/app_icon.png") center / contain no-repeat;
+        opacity: 0.11;
+      }
+
+      .eyebrow {
+        display: inline-flex;
+        align-items: center;
+        gap: 8px;
+        margin-bottom: 12px;
+        color: var(--brand-strong);
+        font-size: 0.78rem;
+        font-weight: 850;
+        letter-spacing: 0.08em;
+        line-height: 1.2;
+        text-transform: uppercase;
+      }
+
+      .eyebrow::before {
+        width: 9px;
+        height: 9px;
+        border-radius: 99px;
+        content: "";
+        background: var(--accent);
+        box-shadow: 0 0 0 5px rgba(196, 108, 22, 0.16);
+      }
+
+      h1,
+      h2,
+      h3,
+      p {
+        margin-top: 0;
+      }
+
+      h1 {
+        max-width: 720px;
+        margin-bottom: 14px;
+        font-size: 3rem;
+        line-height: 1.04;
+        letter-spacing: 0;
+      }
+
+      h2 {
+        margin-bottom: 14px;
+        color: #182028;
+        font-size: 1.42rem;
+        line-height: 1.25;
+        letter-spacing: 0;
+      }
+
+      h3 {
+        margin-bottom: 8px;
+        color: #26323c;
+        font-size: 1.02rem;
+        line-height: 1.3;
+        letter-spacing: 0;
+      }
+
+      .lead {
+        max-width: 760px;
+        margin-bottom: 22px;
+        color: #3f4b55;
+        font-size: 1.08rem;
+        line-height: 1.65;
+      }
+
+      .document-meta {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 10px;
+        margin-bottom: 20px;
+      }
+
+      .meta-pill {
+        display: inline-flex;
+        align-items: center;
+        min-height: 34px;
+        padding: 7px 12px;
+        border: 1px solid rgba(14, 111, 104, 0.2);
+        border-radius: 999px;
+        color: var(--brand-strong);
+        background: rgba(255, 255, 255, 0.7);
+        font-size: 0.86rem;
+        font-weight: 800;
+        line-height: 1.2;
+      }
+
+      .notice-box {
+        position: relative;
+        z-index: 1;
+        max-width: 840px;
+        padding: 14px 16px;
+        border: 1px solid rgba(196, 108, 22, 0.3);
+        border-left: 4px solid var(--accent);
+        border-radius: var(--radius);
+        color: #4b3826;
+        background: var(--accent-soft);
+        font-size: 0.94rem;
+        line-height: 1.55;
+      }
+
+      .legal-document section {
+        padding: 34px 52px;
+        border-bottom: 1px solid var(--line);
+      }
+
+      .legal-document section:last-child {
+        border-bottom: 0;
+      }
+
+      .legal-document p {
+        max-width: 850px;
+        margin-bottom: 14px;
+        color: #3f4b55;
+        overflow-wrap: break-word;
+      }
+
+      .legal-document p:last-child,
+      .legal-document ul:last-child {
+        margin-bottom: 0;
+      }
+
+      .legal-document ul {
+        max-width: 870px;
+        margin: 0 0 16px;
+        padding-left: 0;
+        list-style: none;
+      }
+
+      .legal-document li {
+        position: relative;
+        margin: 10px 0;
+        padding-left: 26px;
+        color: #3f4b55;
+        overflow-wrap: break-word;
+      }
+
+      .legal-document li::before {
+        position: absolute;
+        top: 0.72em;
+        left: 4px;
+        width: 8px;
+        height: 8px;
+        border-radius: 99px;
+        content: "";
+        background: var(--brand);
+        box-shadow: 0 0 0 4px rgba(14, 111, 104, 0.12);
+      }
+
+      strong {
+        color: #1f2931;
+      }
+
+      .site-footer {
+        border-top: 1px solid var(--line);
+        background: #151a1f;
+        color: rgba(255, 255, 255, 0.74);
+      }
+
+      .footer-inner {
+        min-height: 84px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 18px;
+        padding: 20px 0;
+        font-size: 0.92rem;
+      }
+
+      .footer-links {
+        display: flex;
+        align-items: center;
+        gap: 16px;
+      }
+
+      .footer-links a {
+        color: rgba(255, 255, 255, 0.84);
+        font-weight: 700;
+        text-decoration: none;
+      }
+
+      .footer-links a:hover {
+        color: #ffffff;
+      }
+
+      :focus-visible {
+        outline: 3px solid rgba(14, 111, 104, 0.32);
+        outline-offset: 3px;
+      }
+
+      @media (max-width: 940px) {
+        :root {
+          --header-height: 72px;
+        }
+
+        .nav,
+        .page-shell,
+        .footer-inner {
+          width: min(100% - 32px, 760px);
+        }
+
+        .nav {
+          gap: 16px;
+        }
+
+        .brand-tagline {
+          display: none;
+        }
+
+        .nav-links {
+          overflow-x: auto;
+          justify-content: flex-end;
+          max-width: 56vw;
+          padding: 8px 0;
+          scrollbar-width: none;
+        }
+
+        .nav-links::-webkit-scrollbar {
+          display: none;
+        }
+
+        .page-shell {
+          grid-template-columns: minmax(0, 1fr);
+          gap: 18px;
+          padding-top: 24px;
+        }
+
+        .toc {
+          position: static;
+        }
+
+        .toc-title {
+          display: none;
+        }
+
+        .toc nav {
+          display: flex;
+          gap: 6px;
+          overflow-x: auto;
+          padding: 10px;
+          scrollbar-width: none;
+        }
+
+        .toc nav::-webkit-scrollbar {
+          display: none;
+        }
+
+        .toc a {
+          flex: 0 0 auto;
+          min-height: 36px;
+          padding: 8px 11px;
+          white-space: nowrap;
+        }
+
+        .document-header,
+        .legal-document section {
+          padding-right: 34px;
+          padding-left: 34px;
+        }
+
+        h1 {
+          font-size: 2.45rem;
+        }
+      }
+
+      @media (max-width: 640px) {
+        html {
+          scroll-padding-top: 86px;
+        }
+
+        body {
+          line-height: 1.6;
+        }
+
+        .nav,
+        .page-shell,
+        .footer-inner {
+          width: min(100% - 24px, 560px);
+        }
+
+        .site-header {
+          position: static;
+        }
+
+        .nav {
+          min-height: auto;
+          align-items: stretch;
+          flex-direction: column;
+          gap: 12px;
+          padding: 14px 0;
+        }
+
+        .brand {
+          width: 100%;
+        }
+
+        .brand-mark {
+          width: 42px;
+          height: 42px;
+        }
+
+        .brand-tagline {
+          display: block;
+        }
+
+        .nav-links {
+          width: 100%;
+          max-width: none;
+          flex-wrap: wrap;
+          justify-content: flex-start;
+          overflow: visible;
+          padding: 0 0 2px;
+        }
+
+        .nav-link {
+          flex: 1 1 calc(50% - 6px);
+          min-height: 36px;
+          padding: 8px 10px;
+          font-size: 0.86rem;
+        }
+
+        .page-shell {
+          width: 100%;
+          padding: 0 0 38px;
+        }
+
+        .toc {
+          border-right: 0;
+          border-left: 0;
+          border-radius: 0;
+          box-shadow: none;
+        }
+
+        .legal-document {
+          border-right: 0;
+          border-left: 0;
+          border-radius: 0;
+          box-shadow: none;
+        }
+
+        .document-header {
+          padding: 32px 22px 26px;
+        }
+
+        .document-header::after {
+          display: none;
+        }
+
+        h1 {
+          font-size: 2.05rem;
+          line-height: 1.08;
+        }
+
+        h2 {
+          font-size: 1.24rem;
+        }
+
+        .lead {
+          font-size: 1rem;
+        }
+
+        .document-meta {
+          display: grid;
+          grid-template-columns: 1fr;
+        }
+
+        .meta-pill {
+          width: 100%;
+          justify-content: center;
+          text-align: center;
+          border-radius: var(--radius);
+        }
+
+        .legal-document section {
+          padding: 28px 22px;
+        }
+
+        .footer-inner {
+          align-items: flex-start;
+          flex-direction: column;
+        }
+      }
+
+      @media (max-width: 380px) {
+        .nav,
+        .footer-inner {
+          width: min(100% - 20px, 340px);
+        }
+
+        .brand {
+          gap: 10px;
+        }
+
+        .brand-name {
+          font-size: 0.94rem;
+        }
+
+        .brand-tagline {
+          font-size: 0.74rem;
+        }
+
+        .document-header,
+        .legal-document section {
+          padding-right: 16px;
+          padding-left: 16px;
+        }
+
+        h1 {
+          font-size: 1.8rem;
+        }
+
+        .notice-box {
+          padding: 12px;
+        }
+      }
+    </style>
   </head>
   <body>
     <a class="skip-link" href="#main">Skip to content</a>
     <header class="site-header">
       <div class="nav">
-        <a class="brand" href="../index.html" aria-label="CarVault Pro legal home">
-          <img class="brand-mark" src="../assets/app_icon.png" alt="">
+        <a class="brand" href="#main" aria-label="CarVault Pro privacy policy">
+          <img class="brand-mark" src="assets/app_icon.png" alt="">
           <span class="brand-text">
             <span class="brand-name">CarVault Pro</span>
             <span class="brand-tagline">Never miss a car service again</span>
           </span>
         </a>
         <nav class="nav-links" aria-label="Legal navigation">
-          <a class="nav-link" href="../terms/">Terms</a>
-          <a class="nav-link" aria-current="page" href="./">Privacy</a>
+          <a class="nav-link" href="#overview">Overview</a>
+          <a class="nav-link" aria-current="page" href="#main">Privacy</a>
           <a class="nav-link" href="#choices">Privacy Choices</a>
+          <a class="nav-link" href="#contact">Contact</a>
         </nav>
       </div>
     </header>
@@ -275,8 +943,8 @@
       <div class="footer-inner">
         <span>&copy; 2026 CarVault Pro. All rights reserved.</span>
         <nav class="footer-links" aria-label="Footer navigation">
-          <a href="../index.html">Legal Home</a>
-          <a href="../terms/">Terms</a>
+          <a href="#overview">Overview</a>
+          <a href="#contact">Contact</a>
         </nav>
       </div>
     </footer>
