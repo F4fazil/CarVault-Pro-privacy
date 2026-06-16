@@ -3,680 +3,19 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Privacy Policy | CarVault Pro</title>
+    <title>CarVault Pro Legal</title>
     <meta
       name="description"
-      content="Privacy Policy for CarVault Pro."
+      content="CarVault Pro legal documents, including Terms of Service and Privacy Policy."
     >
     <link rel="icon" href="assets/app_icon.png">
-    <style>
-      :root {
-        --bg: #f7f4ed;
-        --surface: #fffefa;
-        --surface-strong: #ffffff;
-        --ink: #151a1f;
-        --muted: #65717c;
-        --line: #ded8cc;
-        --brand: #0e6f68;
-        --brand-strong: #0a4f4b;
-        --accent: #c46c16;
-        --accent-soft: #f6e4cf;
-        --shadow: 0 24px 70px rgba(31, 39, 46, 0.12);
-        --radius: 8px;
-        --header-height: 78px;
-      }
-
-      * {
-        box-sizing: border-box;
-      }
-
-      html {
-        scroll-behavior: smooth;
-        scroll-padding-top: 104px;
-      }
-
-      body {
-        margin: 0;
-        min-width: 320px;
-        overflow-x: hidden;
-        color: var(--ink);
-        background:
-          linear-gradient(180deg, rgba(14, 111, 104, 0.09) 0, rgba(14, 111, 104, 0) 360px),
-          var(--bg);
-        font-family:
-          Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont,
-          "Segoe UI", sans-serif;
-        line-height: 1.65;
-        text-rendering: optimizeLegibility;
-      }
-
-      body::before {
-        position: fixed;
-        inset: 0;
-        z-index: -1;
-        pointer-events: none;
-        content: "";
-        background-image:
-          linear-gradient(rgba(21, 26, 31, 0.035) 1px, transparent 1px),
-          linear-gradient(90deg, rgba(21, 26, 31, 0.035) 1px, transparent 1px);
-        background-size: 48px 48px;
-        mask-image: linear-gradient(180deg, #000 0, transparent 520px);
-      }
-
-      a {
-        color: var(--brand);
-        text-decoration-thickness: 0.08em;
-        text-underline-offset: 0.2em;
-      }
-
-      a:hover {
-        color: var(--brand-strong);
-      }
-
-      .skip-link {
-        position: fixed;
-        top: 12px;
-        left: 12px;
-        z-index: 20;
-        padding: 10px 14px;
-        border-radius: var(--radius);
-        color: var(--surface-strong);
-        background: var(--ink);
-        transform: translateY(-150%);
-        transition: transform 160ms ease;
-      }
-
-      .skip-link:focus {
-        transform: translateY(0);
-      }
-
-      .site-header {
-        position: sticky;
-        top: 0;
-        z-index: 10;
-        border-bottom: 1px solid rgba(222, 216, 204, 0.86);
-        background: rgba(255, 254, 250, 0.88);
-        backdrop-filter: blur(18px);
-      }
-
-      .nav,
-      .page-shell,
-      .footer-inner {
-        width: min(1180px, calc(100% - 48px));
-        margin: 0 auto;
-      }
-
-      .nav {
-        min-height: var(--header-height);
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
-        gap: 24px;
-      }
-
-      .brand {
-        min-width: 0;
-        display: inline-flex;
-        align-items: center;
-        gap: 12px;
-        color: var(--ink);
-        text-decoration: none;
-      }
-
-      .brand-mark {
-        width: 46px;
-        height: 46px;
-        flex: 0 0 auto;
-        border-radius: 12px;
-        box-shadow: 0 10px 22px rgba(14, 111, 104, 0.18);
-      }
-
-      .brand-text {
-        min-width: 0;
-        display: grid;
-        gap: 1px;
-      }
-
-      .brand-name {
-        overflow: hidden;
-        color: var(--ink);
-        font-size: 1rem;
-        font-weight: 800;
-        line-height: 1.2;
-        text-overflow: ellipsis;
-        white-space: nowrap;
-      }
-
-      .brand-tagline {
-        overflow: hidden;
-        color: var(--muted);
-        font-size: 0.8rem;
-        font-weight: 600;
-        line-height: 1.2;
-        text-overflow: ellipsis;
-        white-space: nowrap;
-      }
-
-      .nav-links {
-        display: flex;
-        align-items: center;
-        gap: 6px;
-      }
-
-      .nav-link {
-        min-height: 38px;
-        display: inline-flex;
-        align-items: center;
-        justify-content: center;
-        padding: 8px 12px;
-        border-radius: var(--radius);
-        color: #38424b;
-        font-size: 0.9rem;
-        font-weight: 700;
-        line-height: 1.2;
-        text-decoration: none;
-        white-space: nowrap;
-      }
-
-      .nav-link:hover,
-      .nav-link:focus-visible {
-        color: var(--brand-strong);
-        background: rgba(14, 111, 104, 0.1);
-      }
-
-      .page-shell {
-        display: grid;
-        grid-template-columns: 248px minmax(0, 1fr);
-        gap: 32px;
-        align-items: start;
-        padding: 42px 0 64px;
-      }
-
-      .toc {
-        position: sticky;
-        top: calc(var(--header-height) + 22px);
-        min-width: 0;
-        overflow: hidden;
-        border: 1px solid var(--line);
-        border-radius: var(--radius);
-        background: rgba(255, 254, 250, 0.82);
-        box-shadow: 0 12px 34px rgba(31, 39, 46, 0.07);
-      }
-
-      .toc-title {
-        padding: 17px 18px 12px;
-        color: var(--ink);
-        font-size: 0.78rem;
-        font-weight: 850;
-        letter-spacing: 0.08em;
-        text-transform: uppercase;
-      }
-
-      .toc nav {
-        display: grid;
-        padding: 0 10px 10px;
-      }
-
-      .toc a {
-        min-height: 38px;
-        display: flex;
-        align-items: center;
-        padding: 8px;
-        border-radius: var(--radius);
-        color: #45505a;
-        font-size: 0.9rem;
-        font-weight: 700;
-        line-height: 1.25;
-        text-decoration: none;
-      }
-
-      .toc a:hover,
-      .toc a:focus-visible {
-        color: var(--brand-strong);
-        background: rgba(14, 111, 104, 0.1);
-        outline: none;
-      }
-
-      .legal-document {
-        min-width: 0;
-        overflow: hidden;
-        border: 1px solid var(--line);
-        border-radius: var(--radius);
-        background: var(--surface);
-        box-shadow: var(--shadow);
-      }
-
-      .document-header {
-        position: relative;
-        padding: 46px 52px 36px;
-        border-bottom: 1px solid var(--line);
-        background:
-          linear-gradient(135deg, rgba(14, 111, 104, 0.12), rgba(196, 108, 22, 0.1)),
-          var(--surface-strong);
-      }
-
-      .document-header::after {
-        position: absolute;
-        right: 38px;
-        bottom: 30px;
-        width: 92px;
-        height: 92px;
-        content: "";
-        background: url("assets/app_icon.png") center / contain no-repeat;
-        opacity: 0.11;
-      }
-
-      .eyebrow {
-        display: inline-flex;
-        align-items: center;
-        gap: 8px;
-        margin-bottom: 12px;
-        color: var(--brand-strong);
-        font-size: 0.78rem;
-        font-weight: 850;
-        letter-spacing: 0.08em;
-        line-height: 1.2;
-        text-transform: uppercase;
-      }
-
-      .eyebrow::before {
-        width: 9px;
-        height: 9px;
-        border-radius: 99px;
-        content: "";
-        background: var(--accent);
-        box-shadow: 0 0 0 5px rgba(196, 108, 22, 0.16);
-      }
-
-      h1,
-      h2,
-      h3,
-      p {
-        margin-top: 0;
-      }
-
-      h1 {
-        max-width: 720px;
-        margin-bottom: 14px;
-        font-size: 3rem;
-        line-height: 1.04;
-        letter-spacing: 0;
-      }
-
-      h2 {
-        margin-bottom: 14px;
-        color: #182028;
-        font-size: 1.42rem;
-        line-height: 1.25;
-        letter-spacing: 0;
-      }
-
-      h3 {
-        margin-bottom: 8px;
-        color: #26323c;
-        font-size: 1.02rem;
-        line-height: 1.3;
-        letter-spacing: 0;
-      }
-
-      .lead {
-        max-width: 760px;
-        margin-bottom: 22px;
-        color: #3f4b55;
-        font-size: 1.08rem;
-        line-height: 1.65;
-      }
-
-      .document-meta {
-        display: flex;
-        flex-wrap: wrap;
-        gap: 10px;
-        margin-bottom: 20px;
-      }
-
-      .meta-pill {
-        display: inline-flex;
-        align-items: center;
-        min-height: 34px;
-        padding: 7px 12px;
-        border: 1px solid rgba(14, 111, 104, 0.2);
-        border-radius: 999px;
-        color: var(--brand-strong);
-        background: rgba(255, 255, 255, 0.7);
-        font-size: 0.86rem;
-        font-weight: 800;
-        line-height: 1.2;
-      }
-
-      .legal-document section {
-        padding: 34px 52px;
-        border-bottom: 1px solid var(--line);
-      }
-
-      .legal-document section:last-child {
-        border-bottom: 0;
-      }
-
-      .legal-document p {
-        max-width: 850px;
-        margin-bottom: 14px;
-        color: #3f4b55;
-        overflow-wrap: break-word;
-      }
-
-      .legal-document p:last-child,
-      .legal-document ul:last-child {
-        margin-bottom: 0;
-      }
-
-      .legal-document ul {
-        max-width: 870px;
-        margin: 0 0 16px;
-        padding-left: 0;
-        list-style: none;
-      }
-
-      .legal-document li {
-        position: relative;
-        margin: 10px 0;
-        padding-left: 26px;
-        color: #3f4b55;
-        overflow-wrap: break-word;
-      }
-
-      .legal-document li::before {
-        position: absolute;
-        top: 0.72em;
-        left: 4px;
-        width: 8px;
-        height: 8px;
-        border-radius: 99px;
-        content: "";
-        background: var(--brand);
-        box-shadow: 0 0 0 4px rgba(14, 111, 104, 0.12);
-      }
-
-      strong {
-        color: #1f2931;
-      }
-
-      .site-footer {
-        border-top: 1px solid var(--line);
-        background: #151a1f;
-        color: rgba(255, 255, 255, 0.74);
-      }
-
-      .footer-inner {
-        min-height: 84px;
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
-        gap: 18px;
-        padding: 20px 0;
-        font-size: 0.92rem;
-      }
-
-      .footer-links {
-        display: flex;
-        align-items: center;
-        gap: 16px;
-      }
-
-      .footer-links a {
-        color: rgba(255, 255, 255, 0.84);
-        font-weight: 700;
-        text-decoration: none;
-      }
-
-      .footer-links a:hover {
-        color: #ffffff;
-      }
-
-      :focus-visible {
-        outline: 3px solid rgba(14, 111, 104, 0.32);
-        outline-offset: 3px;
-      }
-
-      @media (max-width: 940px) {
-        :root {
-          --header-height: 72px;
-        }
-
-        .nav,
-        .page-shell,
-        .footer-inner {
-          width: min(100% - 32px, 760px);
-        }
-
-        .nav {
-          gap: 16px;
-        }
-
-        .brand-tagline {
-          display: none;
-        }
-
-        .nav-links {
-          overflow-x: auto;
-          justify-content: flex-end;
-          max-width: 56vw;
-          padding: 8px 0;
-          scrollbar-width: none;
-        }
-
-        .nav-links::-webkit-scrollbar {
-          display: none;
-        }
-
-        .page-shell {
-          grid-template-columns: minmax(0, 1fr);
-          gap: 18px;
-          padding-top: 24px;
-        }
-
-        .page-shell > *,
-        .document-header,
-        .legal-document section,
-        .legal-document p,
-        .lead {
-          min-width: 0;
-          max-width: 100%;
-        }
-
-        .toc {
-          position: static;
-        }
-
-        .toc-title {
-          display: none;
-        }
-
-        .toc nav {
-          display: flex;
-          gap: 6px;
-          overflow-x: auto;
-          padding: 10px;
-          scrollbar-width: none;
-        }
-
-        .toc nav::-webkit-scrollbar {
-          display: none;
-        }
-
-        .toc a {
-          flex: 0 0 auto;
-          min-height: 36px;
-          padding: 8px 11px;
-          white-space: nowrap;
-        }
-
-        .document-header,
-        .legal-document section {
-          padding-right: 34px;
-          padding-left: 34px;
-        }
-
-        h1 {
-          font-size: 2.45rem;
-        }
-      }
-
-      @media (max-width: 640px) {
-        html {
-          scroll-padding-top: 86px;
-        }
-
-        body {
-          line-height: 1.6;
-        }
-
-        .nav,
-        .page-shell,
-        .footer-inner {
-          width: min(100% - 24px, 560px);
-        }
-
-        .site-header {
-          position: static;
-        }
-
-        .nav {
-          min-height: auto;
-          align-items: stretch;
-          flex-direction: column;
-          gap: 12px;
-          padding: 14px 0;
-        }
-
-        .brand {
-          width: 100%;
-        }
-
-        .brand-mark {
-          width: 42px;
-          height: 42px;
-        }
-
-        .brand-tagline {
-          display: block;
-        }
-
-        .nav-links {
-          width: 100%;
-          max-width: none;
-          display: grid;
-          grid-template-columns: repeat(3, minmax(0, 1fr));
-          justify-content: flex-start;
-          overflow: visible;
-          padding: 0 0 2px;
-        }
-
-        .nav-link {
-          min-height: 36px;
-          padding: 8px 10px;
-          font-size: 0.86rem;
-          text-align: center;
-          white-space: normal;
-        }
-
-        .page-shell {
-          width: 100%;
-          padding: 0 0 38px;
-        }
-
-        .toc {
-          border-right: 0;
-          border-left: 0;
-          border-radius: 0;
-          box-shadow: none;
-        }
-
-        .legal-document {
-          border-right: 0;
-          border-left: 0;
-          border-radius: 0;
-          box-shadow: none;
-        }
-
-        .document-header {
-          padding: 32px 22px 26px;
-        }
-
-        .document-header::after {
-          display: none;
-        }
-
-        h1 {
-          font-size: 2.05rem;
-          line-height: 1.08;
-        }
-
-        h2 {
-          font-size: 1.24rem;
-        }
-
-        .lead {
-          font-size: 1rem;
-        }
-
-        .document-meta {
-          display: grid;
-          grid-template-columns: 1fr;
-        }
-
-        .meta-pill {
-          width: 100%;
-          justify-content: center;
-          text-align: center;
-          border-radius: var(--radius);
-        }
-
-        .legal-document section {
-          padding: 28px 22px;
-        }
-
-        .footer-inner {
-          align-items: flex-start;
-          flex-direction: column;
-        }
-      }
-
-      @media (max-width: 380px) {
-        .nav,
-        .footer-inner {
-          width: min(100% - 20px, 340px);
-        }
-
-        .brand {
-          gap: 10px;
-        }
-
-        .brand-name {
-          font-size: 0.94rem;
-        }
-
-        .brand-tagline {
-          font-size: 0.74rem;
-        }
-
-        .document-header,
-        .legal-document section {
-          padding-right: 16px;
-          padding-left: 16px;
-        }
-
-        h1 {
-          font-size: 1.8rem;
-        }
-
-      }
-    </style>
+    <link rel="stylesheet" href="styles.css">
   </head>
   <body>
     <a class="skip-link" href="#main">Skip to content</a>
     <header class="site-header">
       <div class="nav">
-        <a class="brand" href="#main" aria-label="CarVault Pro privacy policy">
+        <a class="brand" href="index.html" aria-label="CarVault Pro legal home">
           <img class="brand-mark" src="assets/app_icon.png" alt="">
           <span class="brand-text">
             <span class="brand-name">CarVault Pro</span>
@@ -684,251 +23,115 @@
           </span>
         </a>
         <nav class="nav-links" aria-label="Legal navigation">
-          <a class="nav-link" href="#overview">Overview</a>
-          <a class="nav-link" href="#choices">Choices</a>
-          <a class="nav-link" href="#contact">Contact</a>
+          <a class="nav-link" href="terms/">Terms</a>
+          <a class="nav-link" href="privacy/">Privacy</a>
+          <a class="nav-link" href="privacy/#choices">Privacy Choices</a>
         </nav>
       </div>
     </header>
 
-    <main id="main" class="page-shell">
-      <aside class="toc" aria-label="Privacy sections">
-        <div class="toc-title">Privacy</div>
-        <nav>
-          <a href="#overview">Overview</a>
-          <a href="#data">Data We Collect</a>
-          <a href="#use">How We Use Data</a>
-          <a href="#sharing">Sharing</a>
-          <a href="#uk">UK Users</a>
-          <a href="#us">US Users</a>
-          <a href="#choices">Choices</a>
-          <a href="#retention">Retention</a>
-          <a href="#contact">Contact</a>
-        </nav>
-      </aside>
-
-      <article class="legal-document">
-        <header class="document-header">
-          <span class="eyebrow">Privacy Policy</span>
-          <h1>Privacy Policy</h1>
-          <p class="lead">
-            This Privacy Policy explains what information CarVault Pro collects,
-            how we use it, when we share it, and the choices available to users.
-          </p>
-          <div class="document-meta">
-            <span class="meta-pill">Effective: June 17, 2026</span>
-            <span class="meta-pill">Applies to UK and US users</span>
+    <main id="main">
+      <section class="hero">
+        <div class="hero-grid">
+          <div class="hero-copy">
+            <span class="eyebrow">Legal documents</span>
+            <h1>Clear terms and privacy information for CarVault Pro users.</h1>
+            <p class="lead">
+              Use these pages as the public links for App Store, Google Play,
+              signup, and Settings. Replace the placeholder contact details
+              before publishing.
+            </p>
+            <div class="hero-actions">
+              <a class="button button-primary" href="terms/">View Terms</a>
+              <a class="button" href="privacy/">View Privacy Policy</a>
+            </div>
           </div>
-        </header>
 
-        <section id="overview">
-          <h2>1. Overview</h2>
-          <p>
-            CarVault Pro is a vehicle maintenance and record keeping app. We
-            collect personal information to create accounts, sync vehicle
-            records, send reminders, provide support, manage subscriptions, and
-            keep the service secure.
-          </p>
-          <p>
-            In this Policy, "CarVault Pro", "we", "us", and "our" mean the
-            operator of CarVault Pro. "You" means the person using the app or
-            visiting our websites.
-          </p>
-        </section>
+          <aside class="hero-panel" aria-label="Legal setup summary">
+            <div class="panel-top">
+              <div class="status-row">
+                <span class="status-pill">Static site ready</span>
+                <span class="status-pill">UK / US template</span>
+              </div>
+              <p class="panel-title">Deploy this folder as your legal site.</p>
+              <p class="panel-subtitle">
+                Works on GitHub Pages, Vercel, Netlify, or any static host.
+              </p>
+            </div>
+            <div class="panel-list">
+              <div class="panel-item">
+                <span class="icon-tile">1</span>
+                <p>
+                  <strong>Terms of Service</strong>
+                  <span>Rules, accounts, subscriptions, acceptable use, liability.</span>
+                </p>
+              </div>
+              <div class="panel-item">
+                <span class="icon-tile">2</span>
+                <p>
+                  <strong>Privacy Policy</strong>
+                  <span>Data collection, use, sharing, retention, UK and US rights.</span>
+                </p>
+              </div>
+              <div class="panel-item">
+                <span class="icon-tile">3</span>
+                <p>
+                  <strong>App links</strong>
+                  <span>Use these URLs in signup, Settings, App Store, and Play Console.</span>
+                </p>
+              </div>
+            </div>
+          </aside>
+        </div>
 
-        <section id="data">
-          <h2>2. Information We Collect</h2>
-          <h3>Account information</h3>
-          <p>
-            We may collect your name, email address, account ID, authentication
-            provider, profile photo, email verification status, and sign-in
-            details needed to run your account.
-          </p>
+        <div class="cards" aria-label="Legal documents">
+          <a class="legal-card" href="terms/">
+            <span class="card-icon">T</span>
+            <h2>Terms of Service</h2>
+            <p>
+              The agreement users accept when they create an account or use
+              CarVault Pro.
+            </p>
+            <span class="card-link">Open Terms</span>
+          </a>
 
-          <h3>Vehicle and maintenance information</h3>
-          <p>
-            We collect the vehicle details, mileage, maintenance records,
-            reminders, notes, photos, receipts, and other content you choose to
-            add to CarVault Pro.
-          </p>
+          <a class="legal-card" href="privacy/">
+            <span class="card-icon">P</span>
+            <h2>Privacy Policy</h2>
+            <p>
+              How CarVault Pro collects, uses, shares, protects, and deletes
+              personal information.
+            </p>
+            <span class="card-link">Open Privacy Policy</span>
+          </a>
+        </div>
 
-          <h3>Support and privacy requests</h3>
-          <p>
-            If you contact support or submit a privacy request, we collect the
-            information needed to respond, such as your account ID, email,
-            request type, message, and timestamps.
-          </p>
-
-          <h3>Subscription information</h3>
-          <p>
-            If you purchase a subscription, we may receive purchase status,
-            product identifiers, renewal status, entitlement status, app store
-            information, and related transaction metadata. We do not receive or
-            store your full payment card number.
-          </p>
-
-          <h3>Device, app, and diagnostics information</h3>
-          <p>
-            We may collect device type, operating system, app version,
-            notification tokens, usage diagnostics, crash logs, and technical
-            data needed to keep the app secure and reliable.
-          </p>
-        </section>
-
-        <section id="use">
-          <h2>3. How We Use Information</h2>
-          <p>We use personal information to:</p>
-          <ul>
-            <li>Create, authenticate, secure, and manage user accounts.</li>
-            <li>Store and sync vehicle records, receipts, reminders, and preferences.</li>
-            <li>Send service reminders, push notifications, email updates, and account messages.</li>
-            <li>Provide support, respond to privacy requests, and investigate issues.</li>
-            <li>Manage subscriptions, entitlements, trials, renewals, and purchase status.</li>
-            <li>Improve app reliability, security, performance, and user experience.</li>
-            <li>Comply with legal, tax, accounting, security, and fraud prevention requirements.</li>
-          </ul>
-        </section>
-
-        <section id="sharing">
-          <h2>4. How We Share Information</h2>
-          <p>
-            We do not sell your personal information. We may share information
-            with service providers and partners that help us operate CarVault
-            Pro, subject to appropriate confidentiality and security measures.
-          </p>
-          <ul>
-            <li>Cloud hosting, database, authentication, and messaging providers such as Firebase or Google Cloud.</li>
-            <li>Sign-in providers such as Apple and Google when you choose those sign-in methods.</li>
-            <li>Subscription and app store providers such as Apple, Google, and RevenueCat.</li>
-            <li>Analytics, diagnostics, crash reporting, and security tools used to maintain the app.</li>
-            <li>Professional advisers, regulators, law enforcement, or courts when required by law or needed to protect rights and safety.</li>
-          </ul>
-        </section>
-
-        <section id="uk">
-          <h2>5. UK Users</h2>
-          <p>
-            If UK data protection law applies, our legal bases may include:
-          </p>
-          <ul>
-            <li><strong>Contract:</strong> to provide the app, account, reminders, support, and subscription features.</li>
-            <li><strong>Legitimate interests:</strong> to secure, debug, improve, and protect CarVault Pro.</li>
-            <li><strong>Consent:</strong> where required, such as optional marketing or certain device permissions.</li>
-            <li><strong>Legal obligation:</strong> to comply with applicable legal, tax, accounting, or regulatory duties.</li>
-          </ul>
-          <p>
-            UK users may have rights to access, correct, delete, restrict, or
-            object to certain processing, and to request data portability. You
-            may also have the right to complain to the UK Information
-            Commissioner's Office.
-          </p>
-        </section>
-
-        <section id="us">
-          <h2>6. US Users</h2>
-          <p>
-            Depending on your state, you may have rights to request access,
-            correction, deletion, or portability of personal information, and to
-            opt out of certain uses such as sale, sharing, or targeted
-            advertising where applicable.
-          </p>
-          <p>
-            CarVault Pro does not currently sell personal information. If we add
-            advertising, data sale, or cross-context behavioral advertising in
-            the future, we will update this Policy and provide required choices.
-          </p>
-          <p>
-            California residents may have additional rights under California
-            privacy law if CarVault Pro is subject to those laws.
-          </p>
-        </section>
-
-        <section id="choices">
-          <h2>7. Your Privacy Choices</h2>
-          <p>
-            You can manage several privacy choices directly in the app:
-          </p>
-          <ul>
-            <li>Turn personalized tips on or off in Privacy settings.</li>
-            <li>Turn usage diagnostics on or off in Privacy settings where available.</li>
-            <li>Control push notifications through app settings or device settings.</li>
-            <li>Request a data export from the Privacy settings screen.</li>
-            <li>Request account deletion from the Privacy settings screen.</li>
-            <li>Contact us to ask about access, correction, deletion, portability, or other privacy rights.</li>
-          </ul>
-        </section>
-
-        <section id="retention">
-          <h2>8. Retention and Deletion</h2>
-          <p>
-            We keep personal information for as long as needed to provide the
-            service, maintain your account, comply with legal obligations,
-            resolve disputes, prevent fraud, and enforce our terms.
-          </p>
-          <p>
-            When you request account deletion, we will delete or de-identify
-            personal information unless we need to keep limited records for
-            legal, security, fraud prevention, accounting, or dispute resolution
-            reasons.
-          </p>
-        </section>
-
-        <section id="security">
-          <h2>9. Security</h2>
-          <p>
-            We use reasonable technical and organizational measures designed to
-            protect personal information. No internet or cloud service can be
-            guaranteed completely secure, so you should keep your account
-            credentials private and use secure devices.
-          </p>
-        </section>
-
-        <section id="international">
-          <h2>10. International Transfers</h2>
-          <p>
-            We and our service providers may process information in countries
-            other than where you live. Where required, we use appropriate legal
-            mechanisms to protect international transfers of personal
-            information.
-          </p>
-        </section>
-
-        <section id="children">
-          <h2>11. Children</h2>
-          <p>
-            CarVault Pro is not directed to children under 13, and we do not
-            knowingly collect personal information from children under 13. If
-            you believe a child has provided personal information to us, contact
-            us so we can review and delete it where appropriate.
-          </p>
-        </section>
-
-        <section id="changes">
-          <h2>12. Changes to This Policy</h2>
-          <p>
-            We may update this Privacy Policy from time to time. When changes
-            are material, we will take reasonable steps to notify you, such as
-            through the app, email, or an updated notice on this page. The
-            "Effective" date shows when this version applies.
-          </p>
-        </section>
-
-        <section id="contact">
-          <h2>13. Contact</h2>
-          <p>
-            Questions or privacy requests can be sent to
-            <a href="mailto:support@carvaultpro.com">support@carvaultpro.com</a>.
-          </p>
-        </section>
-      </article>
+        <div class="checklist">
+          <span class="eyebrow">Before launch</span>
+          <div class="checklist-grid">
+            <div class="check-item">
+              <strong>Replace contact details</strong>
+              <span>Update support@yourdomain.com and legal operator details.</span>
+            </div>
+            <div class="check-item">
+              <strong>Add final URLs</strong>
+              <span>Use /terms/ and /privacy/ in your app and stores.</span>
+            </div>
+            <div class="check-item">
+              <strong>Review with counsel</strong>
+              <span>Legal templates should be checked before production use.</span>
+            </div>
+          </div>
+        </div>
+      </section>
     </main>
 
     <footer class="site-footer">
       <div class="footer-inner">
         <span>&copy; 2026 CarVault Pro. All rights reserved.</span>
         <nav class="footer-links" aria-label="Footer navigation">
-          <a href="#overview">Overview</a>
-          <a href="#contact">Contact</a>
+          <a href="terms/">Terms</a>
+          <a href="privacy/">Privacy</a>
         </nav>
       </div>
     </footer>
