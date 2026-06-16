@@ -179,7 +179,7 @@
       }
 
       .nav-link:hover,
-      .nav-link[aria-current="page"] {
+      .nav-link:focus-visible {
         color: var(--brand-strong);
         background: rgba(14, 111, 104, 0.1);
       }
@@ -348,20 +348,6 @@
         line-height: 1.2;
       }
 
-      .notice-box {
-        position: relative;
-        z-index: 1;
-        max-width: 840px;
-        padding: 14px 16px;
-        border: 1px solid rgba(196, 108, 22, 0.3);
-        border-left: 4px solid var(--accent);
-        border-radius: var(--radius);
-        color: #4b3826;
-        background: var(--accent-soft);
-        font-size: 0.94rem;
-        line-height: 1.55;
-      }
-
       .legal-document section {
         padding: 34px 52px;
         border-bottom: 1px solid var(--line);
@@ -488,6 +474,15 @@
           padding-top: 24px;
         }
 
+        .page-shell > *,
+        .document-header,
+        .legal-document section,
+        .legal-document p,
+        .lead {
+          min-width: 0;
+          max-width: 100%;
+        }
+
         .toc {
           position: static;
         }
@@ -569,17 +564,19 @@
         .nav-links {
           width: 100%;
           max-width: none;
-          flex-wrap: wrap;
+          display: grid;
+          grid-template-columns: repeat(3, minmax(0, 1fr));
           justify-content: flex-start;
           overflow: visible;
           padding: 0 0 2px;
         }
 
         .nav-link {
-          flex: 1 1 calc(50% - 6px);
           min-height: 36px;
           padding: 8px 10px;
           font-size: 0.86rem;
+          text-align: center;
+          white-space: normal;
         }
 
         .page-shell {
@@ -672,9 +669,6 @@
           font-size: 1.8rem;
         }
 
-        .notice-box {
-          padding: 12px;
-        }
       }
     </style>
   </head>
@@ -691,8 +685,7 @@
         </a>
         <nav class="nav-links" aria-label="Legal navigation">
           <a class="nav-link" href="#overview">Overview</a>
-          <a class="nav-link" aria-current="page" href="#main">Privacy</a>
-          <a class="nav-link" href="#choices">Privacy Choices</a>
+          <a class="nav-link" href="#choices">Choices</a>
           <a class="nav-link" href="#contact">Contact</a>
         </nav>
       </div>
@@ -725,11 +718,6 @@
           <div class="document-meta">
             <span class="meta-pill">Effective: June 17, 2026</span>
             <span class="meta-pill">Applies to UK and US users</span>
-          </div>
-          <div class="notice-box">
-            <strong>Launch note:</strong> Replace the contact email, operator
-            details, and any service provider list that does not match your
-            production setup before publishing.
           </div>
         </header>
 
@@ -929,11 +917,7 @@
           <h2>13. Contact</h2>
           <p>
             Questions or privacy requests can be sent to
-            <a href="mailto:support@yourdomain.com">support@yourdomain.com</a>.
-          </p>
-          <p>
-            Before publishing, replace this line with your final business name,
-            mailing address if required, and privacy contact details.
+            <a href="mailto:support@carvaultpro.com">support@carvaultpro.com</a>.
           </p>
         </section>
       </article>
